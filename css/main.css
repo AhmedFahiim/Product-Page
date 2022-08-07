@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header nav, header nav .user, .product-info .product-images .gallery, .product-info .product-details .actions, .product-info .product-details .actions .product-number, .product-in-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav .user .counter-holder, .product-info .product-details .actions .add-to-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav .links-holder .links, .product-info .product-details .price-disc {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header nav {
+  padding-top: 20px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ebebeb;
+}
+header nav .logo-holder,
+header nav .user {
+  flex-basis: 10%;
+}
+header nav .logo a {
+  color: hsl(220deg, 13%, 13%);
+  font-size: 35px;
+}
+header nav .links-holder {
+  flex: 1;
+  margin-left: 50px;
+}
+header nav .links-holder .links li {
+  margin-right: 30px;
+}
+header nav .links-holder .links li.active a {
+  color: hsl(26deg, 100%, 55%);
+}
+header nav .links-holder .links li a {
+  color: rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+}
+header nav .links-holder .links li a:hover {
+  color: hsl(26deg, 100%, 55%);
+}
+header nav .user .card-holder {
+  position: relative;
+}
+header nav .user .counter-holder {
+  position: absolute;
+  background-color: hsl(26deg, 100%, 55%);
+  top: -15px;
+  right: -20px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: #fff;
+  padding-bottom: 3px;
+  opacity: 0;
+  transition: 0.6s;
+}
+header nav .user .card-items {
+  position: absolute;
+  width: 300px;
+  min-height: 200px;
+  background-color: #fff;
+  left: 50%;
+  top: 160%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  z-index: 1000;
+  display: none;
+}
+header nav .user .card-items.active {
+  display: block;
+}
+header nav .user .card-items .card-head {
+  color: hsl(220deg, 13%, 13%);
+  font-size: 16px;
+  padding-top: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0;
+}
+header nav .user .card-items hr {
+  margin: 12px 0;
+}
+header nav .user .card-items .main-box {
+  padding: 0 20px 20px;
+}
+header nav .user .card-items .main-box .empty-text {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  color: hsl(219deg, 9%, 45%);
+}
+header nav .user .card-items .main-box .checkout-button {
+  background-color: hsl(26deg, 100%, 55%);
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 8px 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+header nav .user .card-items .main-box .checkout-button:hover {
+  opacity: 0.8;
+}
+header nav .user .card-icon,
+header nav .user .user-pic {
+  cursor: pointer;
+}
+header nav .user .user-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+header nav .bars {
+  font-size: 25px;
+  cursor: pointer;
+  margin-right: 20px;
+  display: none;
+}
+
+@media (max-width: 991px) {
+  header nav .links-holder .links {
+    position: absolute;
+    top: 60px;
+    right: 90px;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0.5px 0.5px #000;
+    display: none;
+  }
+  header nav .links-holder .links.active {
+    display: flex;
+  }
+  header nav .links-holder .links li {
+    padding: 10px 15px;
+  }
+  header nav .user .user-pic {
+    display: none;
+  }
+  header nav .user .card-items {
+    left: -1300%;
+    transform: translateX(0);
+  }
+  header nav .bars {
+    display: block;
+  }
+}
+.product-info {
+  margin-top: 50px;
+}
+.product-info .row {
+  justify-content: space-evenly;
+}
+.product-info .product-images img {
+  border-radius: 10px;
+}
+.product-info .product-images .view-area img {
+  transition: 0.5s;
+}
+.product-info .product-images .gallery {
+  padding-top: 20px;
+}
+.product-info .product-images .gallery .product-img {
+  width: 21.25%;
+  cursor: pointer;
+}
+.product-info .product-images .gallery .product-img.active {
+  opacity: 0.6;
+}
+.product-info .product-details {
+  padding-right: 100px;
+  position: relative;
+  top: 60px;
+}
+.product-info .product-details .small-head {
+  font-size: 16px;
+  color: hsl(26deg, 100%, 55%);
+  text-transform: uppercase;
+}
+.product-info .product-details .main-head {
+  color: hsl(220deg, 13%, 13%);
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.product-info .product-details .product-brief {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 15px;
+  line-height: 1.8;
+}
+.product-info .product-details .price-disc {
+  margin-bottom: 5px;
+}
+.product-info .product-details .price-disc .price-after {
+  color: hsl(220deg, 13%, 13%);
+  font-size: 25px;
+  font-weight: 500;
+  margin-right: 20px;
+}
+.product-info .product-details .price-disc .disc-perc {
+  background-color: hsl(25deg, 100%, 94%);
+  color: hsl(26deg, 100%, 55%);
+  font-weight: 500;
+  padding: 0 4px;
+}
+.product-info .product-details .price-before {
+  color: hsl(220deg, 14%, 75%);
+  font-size: 18px;
+}
+.product-info .product-details .actions {
+  margin-top: 35px;
+}
+.product-info .product-details .actions .product-number,
+.product-info .product-details .actions .add-to-card {
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.product-info .product-details .actions .product-number {
+  flex-basis: 35%;
+  background-color: #f7f8fd;
+}
+.product-info .product-details .actions .product-number img {
+  cursor: pointer;
+}
+.product-info .product-details .actions .product-number .number {
+  font-weight: bold;
+}
+.product-info .product-details .actions .add-to-card {
+  flex-basis: 60%;
+  background-color: hsl(26deg, 100%, 55%);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: hsl(26deg, 100%, 55%) 0px 4px 6px -1px, hsl(26deg, 100%, 55%) 0px 2px 4px -1px;
+  transition: 0.3s;
+}
+.product-info .product-details .actions .add-to-card:hover {
+  opacity: 0.8;
+}
+.product-info .product-details .actions .add-to-card .shopping-cart {
+  font-weight: bold;
+  color: #fff;
+}
+.product-info .product-details .actions .add-to-card .add-to-word {
+  margin-left: 15px;
+}
+
+@media (max-width: 991px) {
+  .product-info .product-details {
+    padding: 15px 20px;
+  }
+}
+.product-in-cart {
+  margin-bottom: 8px;
+}
+.product-in-cart .product-image-in-cart {
+  width: 40px;
+  border-radius: 4px;
+  max-width: 100%;
+}
+.product-in-cart .priceAndName {
+  flex: 1;
+  text-align: center;
+}
+.product-in-cart .priceAndName .name-in-cart,
+.product-in-cart .priceAndName .newPrice-in-cart,
+.product-in-cart .priceAndName .multiply,
+.product-in-cart .priceAndName .item-qty {
+  color: hsl(219deg, 9%, 45%);
+}
+.product-in-cart .priceAndName .name-in-cart {
+  margin: 0;
+  font-size: 14px;
+}
+.product-in-cart .priceAndName .multiply {
+  margin: 0 5px;
+}
+.product-in-cart .priceAndName .totalPrice {
+  margin-left: 5px;
+  font-weight: 500;
+}
+.product-in-cart .delete {
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Frontend Mentor | Product page</title>
+  </head>
+
+  <body>
+    <main>
+      <!-- start header -->
+      <header>
+        <div class="container">
+          <nav>
+            <div class="logo-holder">
+              <h1 class="logo"><a href="#">Sneakers</a></h1>
+            </div>
+            <div class="links-holder">
+              <ul class="links">
+                <li class="active"><a href="#">Collections</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <i class="fa-solid fa-bars bars"></i>
+            <div class="user">
+              <div class="card-holder">
+                <img
+                  src="images/icon-cart.svg"
+                  alt="card-icon"
+                  class="img-fluid card-icon"
+                  id="card-icon"
+                />
+                <div class="counter-holder">
+                  <span class="card-counter">0</span>
+                </div>
+                <div class="card-items" id="card-items">
+                  <h3 class="card-head">Selected Items:</h3>
+                  <hr />
+                  <div class="main-box">
+                    <p class="empty-text">Your Cart is Empty.</p>
+                    <button class="checkout-button">Checkout</button>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="images/image-avatar.png"
+                alt="user-pic"
+                class="user-pic img-fluid"
+              />
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- end header -->
+      <!-- start product info -->
+      <section class="product-info">
+        <div class="container">
+          <div class="row">
+            <div class="product-images col-lg-4">
+              <div class="view-area">
+                <img src="" alt="" class="img-fluid" />
+              </div>
+              <div class="gallery">
+                <img
+                  src="images/image-product-1.jpg"
+                  alt=""
+                  class="product-img img-fluid active"
+                />
+                <img
+                  src="images/image-product-2.jpg"
+                  alt=""
+                  class="product-img img-fluid"
+                />
+                <img
+                  src="images/image-product-3.jpg"
+                  alt=""
+                  class="product-img img-fluid"
+                />
+                <img
+                  src="images/image-product-4.jpg"
+                  alt=""
+                  class="product-img img-fluid"
+                />
+              </div>
+            </div>
+            <div class="product-details col-lg-5">
+              <h2 class="small-head">Sneaker company</h2>
+              <h2 class="main-head"></h2>
+              <p class="product-brief">
+                These low-profile sneakers are your perfect casual wear
+                companion. Featuring a durable rubber outer sole, they’ll
+                withstand everything the weather can offer.
+              </p>
+              <div class="price-disc">
+                <span class="price-after"></span>
+                <span class="disc-perc"></span>
+              </div>
+              <del class="price-before"></del>
+              <div class="actions">
+                <div class="product-number">
+                  <img
+                    src="images/icon-plus.svg"
+                    alt=""
+                    class="handler img-fluid"
+                  />
+                  <span class="number" id="product-counter">1</span>
+                  <img
+                    src="images/icon-minus.svg"
+                    alt=""
+                    class="handler img-fluid"
+                  />
+                </div>
+                <div class="add-to-card" id="add-to-card">
+                  <i class="fa-solid fa-cart-shopping shopping-cart"></i>
+                  <span class="add-to-word">Add to cart</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end product info -->
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
